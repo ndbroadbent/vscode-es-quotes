@@ -16,7 +16,6 @@ import {
 export const enum StringType {
     singleQuoted,
     doubleQuoted,
-    template
 }
 
 const supportedLanguages = [

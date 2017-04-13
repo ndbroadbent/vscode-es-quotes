@@ -1,13 +1,13 @@
 {
-  "name": "es-quotes",
-  "version": "0.2.4",
-  "publisher": "vilicvane",
-  "displayName": "ECMAScript Quotes Transformer",
-  "description": "Transform quotes of ECMAScript string literals.",
+  "name": "quotes",
+  "version": "1.0.0",
+  "publisher": "ndbroadbent",
+  "displayName": "Quotes",
+  "description": "Transform quotes of string literals.",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vilic/vscode-es-quotes.git"
+    "url": "https://github.com/ndbroadbent/vscode-quotes.git"
   },
   "engines": {
     "vscode": "^0.10.0"
@@ -17,33 +17,13 @@
     "onCommand:esQuotes.transformToNormalString",
     "onCommand:esQuotes.transformBetweenSingleDoubleQuotes"
   ],
-  "main": "./bld/src/extension",
+  "main": "./build/src/extension",
   "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "ES Quotes Configuration",
-      "properties": {
-        "esQuotes.defaultQuote": {
-          "type": "string",
-          "description": "Default normal quote, can be ' or \"."
-        }
-      }
-    },
     "commands": [
       {
-        "command": "esQuotes.transformToTemplateString",
-        "title": "Transform to Template String",
-        "category": "ES Quotes"
-      },
-      {
-        "command": "esQuotes.transformToNormalString",
-        "title": "Transform to Normal String",
-        "category": "ES Quotes"
-      },
-      {
-        "command": "esQuotes.transformBetweenSingleDoubleQuotes",
-        "title": "Transform between Single and Double Quotes",
-        "category": "ES Quotes"
+        "command": "quotes.toggleBetweenSingleAndDoubleQuotes",
+        "title": "Toggle between single and double quotes.",
+        "category": "Quotes"
       }
     ]
   },

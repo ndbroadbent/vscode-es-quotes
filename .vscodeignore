@@ -3,7 +3,7 @@ typings/**
 src/**
 **/*.map
 **/*.fw.png
-bld/tests/**
+build/tests/**
 .gitignore
 jsconfig.json
 tsconfig.json

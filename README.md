@@ -1,37 +1,52 @@
-# ES Quotes for Visual Studio Code
+# Quotes for Visual Studio Code
 
-A simple quotes helper for JavaScript and TypeScript.
+A (very) simple quotes helper for VSCode.
 
-It uses a simplified parser to build the string tree then handle the replacement.
-So don't worry about your comments containing quotes.
+Place a cursor inside one or more strings, and toggle between single and double quotes.
 
-![es-quotes](https://cloud.githubusercontent.com/assets/970430/10563944/4cc04462-75d1-11e5-984b-41e0a21a72c3.gif)
+This extension currently does not support multi-line strings, ES6 JS template strings, Python `docstrings`, or Ruby `heredoc` strings, but pull requests are welcome!
 
-And more.
+Also it currently uses the fastest (and dumbest) possible algorithm, so it
+will probably do bad things if you run it while the cursor is not
+inside a string.
+E.g. If there are two strings on either side of the cursor, it will replace the last
+quote of the previous string, and the first quote of the next string.
 
-![es-quotes-transform-template-strings](https://cloud.githubusercontent.com/assets/970430/11168910/ee3c5646-8bde-11e5-938e-00ed604aba3d.gif)
+If this happens to you, I would recommend pressing "Ctrl+Z",
+and placing the cursor in the correct position.
+
+If you feel strongly about fixing this case so that it parses all strings properly,
+then pull requests are welcome!
+
+
+## Example
+
+#### Before:
+
+```js
+"Here's a \"string\"!"
+```
+
+#### After running `quotes.toggleBetweenSingleAndDoubleQuotes`:
+
+```js
+'Here\'s a "string"!'
+```
+
 
 ## Install
 
 `Ctrl/Cmd + P` in Visual Studio Code, then:
 
 ```sh
-ext install es-quotes
+ext install quotes
 ```
 
 ## Commands
 
-- `esQuotes.transformToTemplateString`
-  Transform a normal string to a template string.
-- `esQuotes.transformToNormalString`
-  Transform a template string to a normal string.
-- `esQuotes.transformBetweenSingleDoubleQuotes`
-  Transform a normal string between single and double quotes.
+- `quotes.toggleBetweenSingleAndDoubleQuotes`
+  Toggle between single and double quotes.
 
-## Options
-
-- `esQuotes.defaultQuote`
-  Default quote when transforming to a normal string. Can be either `'` or `"`.
 
 ## License
 

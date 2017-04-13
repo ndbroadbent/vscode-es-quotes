@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es6",
-        "outDir": "bld",
+        "outDir": "build",
         "noImplicitAny": true,
         "noEmitOnError": true,
         "lib": [
